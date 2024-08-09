@@ -1,0 +1,24 @@
+﻿<Properties StartupConfiguration="{78B5A19C-C9F1-4E22-9C60-F0C0009867DE}|Default" GitUserInfo="UsingMD">
+  <MonoDevelop.Ide.ItemProperties.Basic PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Loops FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.ConditionalStatements PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="GeneralNotes/Person.cs">
+    <Files>
+      <File FileName="Basic/BasicExerscizes.cs" Line="8" Column="7" />
+      <File FileName="GeneralNotes/Program.cs" Line="17" Column="1" />
+      <File FileName="GeneralNotes/Student.cs" Line="9" Column="3" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__" />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.GeneralNotes FirstBuild="True" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>
