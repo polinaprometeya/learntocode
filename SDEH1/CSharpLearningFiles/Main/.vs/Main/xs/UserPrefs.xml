@@ -3,15 +3,16 @@
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.Loops FirstBuild="True" />
   <MonoDevelop.Ide.ItemProperties.ConditionalStatements PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GeneralNotes/Person.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Basic/BasicExerscizes.cs">
     <Files>
       <File FileName="Basic/BasicExerscizes.cs" Line="8" Column="7" />
-      <File FileName="GeneralNotes/Program.cs" Line="17" Column="1" />
-      <File FileName="GeneralNotes/Student.cs" Line="9" Column="3" />
+      <File FileName="GeneralNotes/Student.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State name="__root__" />
+        <State name="__root__">
+          <Node name="Main" expanded="True" />
+        </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
