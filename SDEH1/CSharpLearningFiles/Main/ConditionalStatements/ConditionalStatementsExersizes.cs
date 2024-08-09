@@ -18,42 +18,45 @@ Expected input and output
 {
     static void Main(string[] args)
     {
-            //CONTROL
-            Console.WriteLine("Deja Vu");
+            ////CONTROL
+            //Console.WriteLine("Deja Vu");
 
-            //ConditionalStatementsExersizes - EXERSIZE-1
-            //AbsoluteValue(6832); //→ 6832
-            //AbsoluteValue(-392); // → 392
-
-            //ConditionalStatementsExersizes - EXERSIZE-2
-            //DivisibleBy2Or3(15, 30); //→ 450
-            //DivisibleBy2Or3(2, 90); //→ 180
-            //DivisibleBy2Or3(7, 12); //→ 19
-
-            //ConditionalStatementsExersizes - EXERSIZE-3
-            //lettersOutput("xyz"); //→ false
-            //lettersOutput("DOG"); //→ true
-            //lettersOutput("L9#"); //→ false
-
-            //ConditionalStatementsExersizes - EXERSIZE-4
-            //IfGreaterThanThirdOne(new int[] { 2, 7, 12 });
-            //IfGreaterThanThirdOne(new int[] { -5, -8, 50 });
-
-            //ConditionalStatementsExersizes - EXERSIZE-5
-            //IfSortedAscending(new int[] { 3, 7, 10 }); //→ true
-            //IfSortedAscending(new int[] { 74, 62, 99 }); //→ false
+            //ConditionalStatementsExersizes - EXERSIZE-7
+            //IfYearIsLeap(2016); // → true
+            //IfYearIsLeap(2018); // → false
 
             //ConditionalStatementsExersizes - EXERSIZE-6
             //PositiveNegativeOrZero(5.24); //→ positive
             //PositiveNegativeOrZero(0.0); //→ zero
             //PositiveNegativeOrZero(-994.53); //→ negative
 
-            //ConditionalStatementsExersizes - EXERSIZE-7
-            //IfYearIsLeap(2016); // → true
-            //IfYearIsLeap(2018); // → false
+            //ConditionalStatementsExersizes - EXERSIZE-5
+            //IfSortedAscending(new int[] { 3, 7, 10 }); //→ true
+            //IfSortedAscending(new int[] { 74, 62, 99 }); //→ false
+
+            //ConditionalStatementsExersizes - EXERSIZE-4
+            //IfGreaterThanThirdOne(new int[] { 2, 7, 12 });
+            //IfGreaterThanThirdOne(new int[] { -5, -8, 50 });
+
+            //ConditionalStatementsExersizes - EXERSIZE-3
+            //lettersOutput("xyz"); //→ false
+            //lettersOutput("DOG"); //→ true
+            //lettersOutput("L9#"); //→ false
+
+            //ConditionalStatementsExersizes - EXERSIZE-2
+            //DivisibleBy2Or3(15, 30); //→ 450
+            //DivisibleBy2Or3(2, 90); //→ 180
+            //DivisibleBy2Or3(7, 12); //→ 19
+
+            //ConditionalStatementsExersizes - EXERSIZE-1
+            //AbsoluteValue(6832); //→ 6832
+            //AbsoluteValue(-392); // → 392
+
+
 
         }
 
+        ////ConditionalStatementsExersizes - EXERSIZE-7
         //static void IfYearIsLeap(int year)
         //    {
         //        if (year % 4 == 0 || year % 400 == 0)
@@ -65,7 +68,7 @@ Expected input and output
         //        }
         //    }
 
-
+        ////ConditionalStatementsExersizes - EXERSIZE-6
         //static void PositiveNegativeOrZero(double positiveNegativCheck)
         //{
         //    if (positiveNegativCheck == 0)
@@ -78,16 +81,14 @@ Expected input and output
         //    }
         //}
 
-
+        ////ConditionalStatementsExersizes - EXERSIZE-5
         //static void IfSortedAscending(int[] numbersForSorting)
         //{
         //    int[] clonedInputArray = (int[])numbersForSorting.Clone();
         //    Array.Sort(clonedInputArray);
         //    //Console.WriteLine(string.Join(' ',clonedInputArray));
         //    //Console.WriteLine(string.Join(',', numbersForSorting));
-
         //    //You cannot use '==' to compare two arrays in c#.
-
         //    if (clonedInputArray.SequenceEqual(numbersForSorting))
         //    {
         //        Console.WriteLine("Result:" + true);
@@ -98,18 +99,17 @@ Expected input and output
         //    }
         //}
 
+        ////ConditionalStatementsExersizes - EXERSIZE-4
         //static void IfGreaterThanThirdOne(int[] randomNumbers)
         //{
-
         //        int a = randomNumbers[0];
         //        int b = randomNumbers[1];
         //        int c = randomNumbers[2];
         //        if (a * b > c) { Console.WriteLine(true); } else { Console.WriteLine(false); }
-
         //        Console.WriteLine(randomNumbers[0]);
         //}
 
-
+        ////ConditionalStatementsExersizes - EXERSIZE-3
         //static bool IfConsistsOfUppercaseLetters(string input){
         //    bool haveUpper = true;
         //    for (int i = 0; i < input.Length; i++)
@@ -117,11 +117,10 @@ Expected input and output
         //        if (char.IsNumber(input[i]) || !char.IsUpper(input[i])) {
         //        haveUpper = false;
         //        }
-
         //    } return haveUpper;
         //}
 
-
+        ////ConditionalStatementsExersizes - EXERSIZE-2
         //static void DivisibleBy2Or3(int a, int b)
         //{
         //    bool checkOne = (a % 3 == 0 || a % 2 == 0) ? true : false;
@@ -136,6 +135,7 @@ Expected input and output
         //    }
         //}
 
+        ////ConditionalStatementsExersizes - EXERSIZE-1
         //static void AbsoluteValue(int a)
         //{
         //    if (0 > a)

@@ -5,19 +5,13 @@ using static System.Net.Mime.MediaTypeNames;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 /*
- Multiplication table
-Write a method that prints 10 by 10 multiplication table. Remember about readibility (spaces in the right place).
+ * The biggest number
+
+Two 7s next to each other
+Given an array of positive digits, write a method that returns number of times that two 7's are next to each other in an array.
 Expected input and output
-1 2 3 4 5 6 7 8 9 10
-2 4 6 8101214161820
-3 6 912151821242730
-4 81216202428323640
-5 10 15 20 25 30 35 40 45 50
-6 12 18 24 30 36 42 48 54 60
-7 14 21 28 35 42 49 56 63 70
-8 16 24 32 40 48 56 64 72 80
-9 18 27 36 45 54 63 72 81 90
-10 20 30 40 50 60 70 80 90 100
+         Two7sNextToEachOther([ 8, 2, 5, 7, 9, 0, 7, 7, 3, 1]) → 1
+         Two7sNextToEachOther([ 9, 4, 5, 3, 7, 7, 7, 3, 2, 5, 7, 7]) → 3
 */
 
 namespace Loops
@@ -26,43 +20,70 @@ namespace Loops
     {
         static void Main(string[] args)
         {
-          //CONTROL
-           Console.WriteLine("Deja Su");
+            //CONTROL
+            Console.WriteLine("Deja Vacu");
 
-          //LoopsExercizes - EXERSIZE-1
-            multiplicationTable(4);
+            //  //LoopsExercizes - EXERSIZE-3
+            Two7sNextToEachOther([8, 2, 5, 7, 9, 0, 7, 7, 3, 1]); //→ 1
+            Two7sNextToEachOther([9, 4, 5, 3, 7, 7, 7, 3, 2, 5, 7, 7]); //→ 3
+
+            //  //LoopsExercizes - EXERSIZE-2
+            //TheBiggestNumber(new int[] { 190, 291, 145, 209, 280, 200 }); //→ 291
+            //TheBiggestNumber(new int[] { -9, -2, -7, -8, -4 }); //→ -2
+
+            //  //LoopsExercizes - EXERSIZE-1
+            //    multiplicationTable(4);
+
+
         }
-
-        static void multiplicationTable(int tableSize )
+        //  //LoopsExercizes - EXERSIZE-3
+        static void Two7sNextToEachOther([8, 2, 5, 7, 9, 0, 7, 7, 3, 1])
         {
-            Console.WriteLine(multiplicationTableColumn(tableSize));
+
         }
+
+        //  //LoopsExercizes - EXERSIZE-2
+        //static void TheBiggestNumber(int[] biggestNumberTest)
+        //{
+        //    int biggestNumber = -100;
+        //    //biggestNumberTest.ForEach( i => { if (i > biggestNumber) biggestNumber = i;});
+        //    foreach (int i in biggestNumberTest){
+        //       if (i> -101){
+        //            if (i > biggestNumber) { biggestNumber = i;}
+        //        } else {
+        //         Console.WriteLine("Error");
+        //        }
+        //    }
+        //    Console.WriteLine("The Result:" + biggestNumber);
+        //}
+        //}
+
+        ////  //LoopsExercizes - EXERSIZE-1
+        //static void multiplicationTable(int tableSize )
+        //{ Console.WriteLine(multiplicationTableColumn(tableSize));}
+        //
+        //static int multiplicationTableRow()
+        //{
+        //   int[] tableArray =  new int[];
+        //    for (int i = 0; i<11; i++)
+        //    {
+        //        Array.tableArray.Add(i+1);
+        //        i++;
+        //    }
+        //    return tableArray;
+        //}
+        //
+        //static int multiplicationTableColumn(int tableSize)
+        //{
+        //    int[] tableColumnArray =  new multiplicationTableRow();
+        //    string text = "fkdfdsfdflkdkfk@dfsdfjk72388389@kdkfkdfkkl@jkdjkfjd@jjjk@";
+        //    text = text.Replace("@", "@" + System.Environment.NewLine);
+        //    foreach (c in tableColumnArray)
+        //    {
+        //    Console.WriteLine(randomNumbers[0]);
+        //    }
+        //}
 
 
     }
-
-    static int multiplicationTableRow()
-    {
-       int[] tableArray =  new int[];
-        for (int i = 0; i<11; i++)
-        {
-            Array.tableArray.Add(i+1);
-            i++;
-        }
-        return tableArray;
-    }
-
-    static int multiplicationTableColumn(int tableSize)
-    {
-        int[] tableColumnArray =  new multiplicationTableRow();
-        string text = "fkdfdsfdflkdkfk@dfsdfjk72388389@kdkfkdfkkl@jkdjkfjd@jjjk@";
-        text = text.Replace("@", "@" + System.Environment.NewLine);
-
-        foreach (c in tableColumnArray)
-        {
-            Console.WriteLine(randomNumbers[0]);
-        }
-    }
-
-
 }

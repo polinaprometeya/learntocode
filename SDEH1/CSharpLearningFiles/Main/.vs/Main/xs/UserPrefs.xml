@@ -1,17 +1,25 @@
-﻿<Properties StartupConfiguration="{78B5A19C-C9F1-4E22-9C60-F0C0009867DE}|Default" GitUserInfo="UsingMD">
+﻿<Properties StartupConfiguration="{7EB7F7AF-DFEF-4E08-B18C-CB8424D1F526}|Default" GitUserInfo="UsingMD">
   <MonoDevelop.Ide.ItemProperties.Basic PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.Loops FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.Loops PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.ItemProperties.ConditionalStatements PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Basic/BasicExerscizes.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ExercisesLoops/LoopsExercizes.cs">
     <Files>
-      <File FileName="Basic/BasicExerscizes.cs" Line="8" Column="7" />
-      <File FileName="GeneralNotes/Student.cs" />
+      <File FileName="ExercisesLoops/LoopsExercizes.cs" Line="8" Column="22" />
+      <File FileName="ConditionalStatements/ConditionalStatementsExersizes.cs" Line="112" Column="56" />
+      <File FileName="Basic/BasicExerscizes.cs" Line="163" Column="1" />
+      <File FileName="GeneralNotes/Person.cs" Line="1" Column="1" />
+      <File FileName="GeneralNotes/Student.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Main" expanded="True" />
+          <Node name="Main">
+            <Node name="GeneralNotes" expanded="True" />
+            <Node name="Loops">
+              <Node name="LoopsExercizes.cs" selected="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>

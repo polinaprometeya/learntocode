@@ -16,64 +16,62 @@ namespace Basic
             //BasicExerscizes - CONTROL
             //Console.WriteLine("Hello, World! → or!!! something");
 
-            //BasicExerscizes - EXERSIZE-1  (yes , I called the method something else)
-            //randomCalculationOutput();
+            //BasicExerscizes - EXERSIZE-7
+            //SwapTwoNumbers(87, 45);
+            //SwapTwoNumbers(-13, 2); 
+
+            //BasicExerscizes - EXERSIZE-6
+            //TheCubeOf(2); //→ 8
+            //TheCubeOf(-5.5); //→ -166.375
+
+            //BasicExerscizes - EXERSIZE-5
+            //ModuloOperations(8, 5, 2);
+
+            //BasicExerscizes - EXERSIZE-4  
+            //IsResultTheSame(2 + 2, 2 * 2); //→ true
+            //IsResultTheSame(9 / 3, 16 - 1); //→ false
+
+            //BasicExerscizes - EXERSIZE-3 
+            //elementaryOperations(3, 8);
 
             //BasicExerscizes - EXERSIZE-2  (yes , I called the method something else, again.)
             //temperatureOutput(0);
             //temperatureOutput(100);
             //temperatureOutput(-300);
 
-            //BasicExerscizes - EXERSIZE-3 
-            //elementaryOperations(3, 8);
+            //BasicExerscizes - EXERSIZE-1  (yes , I called the method something else)
+            //randomCalculationOutput();
 
-            //BasicExerscizes - EXERSIZE-4  
-            //IsResultTheSame(2 + 2, 2 * 2); //→ true
-            //IsResultTheSame(9 / 3, 16 - 1); //→ false
 
-            //BasicExerscizes - EXERSIZE-5
-            //ModuloOperations(8, 5, 2);
-
-            //BasicExerscizes - EXERSIZE-6
-            //TheCubeOf(2); //→ 8
-            //TheCubeOf(-5.5); //→ -166.375
-
-            //BasicExerscizes - EXERSIZE-7
-            //SwapTwoNumbers(87, 45);
-            //SwapTwoNumbers(-13, 2); 
 
 
         }
 
-        //private string GetDebuggerDisplay()
-        //{
-        //    return ToString();
-        //}
 
+        ////BasicExerscizes - EXERSIZE-7
         static void SwapTwoNumbers(int a, int b)
         {
             int first = b;
             int second = a;
-
             Console.WriteLine("Result: " + first + "   " + second);
-
         }
 
+        ////BasicExerscizes - EXERSIZE-6
         static void TheCubeOf(double a)
         {
             Console.WriteLine("Result: " + (a * a * a));
-
         }
 
+        ////BasicExerscizes - EXERSIZE-5
         static void ModuloOperations(int a, int b, int c)
         {
             int modulo = a / b;
             Console.WriteLine("Result: " + modulo / c);
         }
 
+        ////BasicExerscizes - EXERSIZE-4  
         static void IsResultTheSame(int a, int b)
         {
-
             if (a == b)
             {
                 Console.WriteLine("Result: " + true);
@@ -84,6 +82,7 @@ namespace Basic
             }
         }
 
+        ////BasicExerscizes - EXERSIZE-3 
         static void elementaryOperations(int a, int b)
         {
             if (b == 0)
@@ -102,32 +101,28 @@ namespace Basic
             }
         }
 
-
         static int simpleCalculationsSum(int a, int b)
         {
             return a + b;
-
         }
 
         static int simpleCalculationsSubstraction(int a, int b)
 
         {
             return a - b;
-
         }
 
         static int simpleCalculationsMultiplication(int a, int b)
         {
             return a * b;
-
         }
 
         static int simpleCalculationsDivision(int a, int b)
         {
             return a / b;
-
         }
 
+        ////BasicExerscizes - EXERSIZE-2
         static double temperatureConverter(int a)
         {
             double fahrenheit = (a * 1.8) + 32;
@@ -143,10 +138,10 @@ namespace Basic
             else
             {
                 Console.WriteLine("Temperature = " + temperatureConverter(a) + "F");
-
             }
         }
 
+        ////BasicExerscizes - EXERSIZE-1
         static int addAndMultiply(int a, int b, int c)
         {
             int adition = a + b;
@@ -160,6 +155,11 @@ namespace Basic
         {
             Console.WriteLine("result:" + "-->" + addAndMultiply(2, 4, 5));
         }
+
+        //private string GetDebuggerDisplay()
+        //{
+        //    return ToString();
+        //}
 
     }
 
