@@ -1,0 +1,21 @@
+﻿<Properties>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="../../../../../../../../opt/homebrew/Cellar/php/8.2.10/share/php/pear/Learnphpcode/SDEH1-project1.cs">
+    <Files>
+      <File FileName="../../../../../../../../opt/homebrew/Cellar/php/8.2.10/share/php/pear/Learnphpcode/SDEH1-project1.cs" Line="25" Column="19" />
+      <File FileName="../../../../../../../../opt/homebrew/Cellar/php/8.2.10/share/php/pear/Learnphpcode/MyPage.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SDEH1" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+</Properties>
