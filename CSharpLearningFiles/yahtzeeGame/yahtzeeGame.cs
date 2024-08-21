@@ -8,8 +8,6 @@
             startRound();
         }
 
-
-
         static void startRound()
         {
             twrowWithDice(5);
@@ -22,7 +20,7 @@
             }
         }
 
-            static void nextRound(int roundSavedThrows)
+        static void nextRound(int roundSavedThrows)
         {
             List<int> userRoundThrowSaved = new List<int>(new int[] { });
             int saveOne;
@@ -57,7 +55,8 @@
             //Save all the chosen dice 3 throws Ask what dice result to store
         }
 
-        static List<int> twrowWithDice(int numberOfDice) {
+        static List<int> twrowWithDice(int numberOfDice)
+        {
             List<int> userRoundThrow = new List<int>(new int[] { });
             for (int i=0; i < numberOfDice; i++)
             {
