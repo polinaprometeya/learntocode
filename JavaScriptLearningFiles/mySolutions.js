@@ -5,12 +5,12 @@
 // Prepare a test call of the function for both valid division and division by zero. */
 
 
-// let div =  (a, b) => { 
-//     if (b == 0) { 
-//         throw new RangeError("You cannot divide by 0");} 
-//     return a / b; };
+ let div =  (a, b) => { 
+     if (b == 0) { 
+         throw new RangeError("You cannot divide by 0");} 
+     return a / b; };
 
-// console.log("division", div(4,1));
+ console.log("division", div(4,1));
 
 
 // /* Exersize 5.1.11
@@ -27,82 +27,82 @@
 //     before adding a new contact, check if the passed argument is an array and if the new contact data have any value.
 //  */
 
-// let contacts = [{
-//     name: "Maxwell Wright",
-//     phone: "(0191) 719 6495",
-//     email: "Curabitur.egestas.nunc@nonummyac.co.uk"
-//     }, {
-//     name: "Raja Villarreal",
-//     phone: "0866 398 2895",
-//     email: "posuere.vulputate@sed.com"
-//     }, {
-//     name: "Helen Richards",
-//     phone: "0800 1111",
-//     email: "libero@convallis.edu"
-//     }];
+ let contacts = [{
+     name: "Maxwell Wright",
+     phone: "(0191) 719 6495",
+     email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+     }, {
+     name: "Raja Villarreal",
+     phone: "0866 398 2895",
+     email: "posuere.vulputate@sed.com"
+     }, {
+     name: "Helen Richards",
+     phone: "0800 1111",
+     email: "libero@convallis.edu"
+     }];
 
     
-// let userAction = prompt("What do you want to do 1) Display the first contact, 2) Display the last contact, 3) Display all contacts, 4)Add new contact or 5)Stop here?", 0);
+ let userAction = prompt("What do you want to do 1) Display the first contact, 2) Display the last contact, 3) Display all contacts, 4)Add new contact or 5)Stop here?", 0);
 
-// // let continue = true; 
+ let continue = true; 
 
-// // function getUserAction(userAction){
-// //     let userAction = prompt("What do you want to do 1) Display the first contact, 2) Display the last contact, 3) Display all contacts, 4)Add new contact or 5)Stop here?", 0);
-// // }
+ function getUserAction(userAction){
+     let userAction = prompt("What do you want to do 1) Display the first contact, 2) Display the last contact, 3) Display all contacts, 4)Add new contact or 5)Stop here?", 0);
+ }
 
 
-// function showContact(userAction){
-//     if (userAction == 1){
-//         alert(`The current first contact is: ${contacts[0].name}`);
-//     } else if(userAction == 2){
-//         let lastConact = contacts.length - 1;
-//         alert(`Current the last contact is: ${contacts[lastConact].name}`);
-//     } else return userAction;
-// }
+ function showContact(userAction){
+    if (userAction == 1){
+         alert(`The current first contact is: ${contacts[0].name}`);
+     } else if(userAction == 2){
+         let lastConact = contacts.length - 1;
+         alert(`Current the last contact is: ${contacts[lastConact].name}`);
+     } else return userAction;
+ }
 
-// function showAllContacts(){
-//     let list = "";
-//     let count = 1;
-//     contacts.forEach(contact => {
-//     list += ' ' + count + '. ' + contact.name + '\n';
-//     count++;
-//     });
-//      alert(`Your contacts \n${list}`); 
-//     // for( let name in contacts) { console.log(`${name} -> ${contacts[name]}`);};
-//     // alert (`Your contacts \n${contacts.name}`);
+ function showAllContacts(){
+     let list = "";
+     let count = 1;
+     contacts.forEach(contact => {
+     list += ' ' + count + '. ' + contact.name + '\n';
+     count++;
+     });
+      alert(`Your contacts \n${list}`); 
+     // for( let name in contacts) { console.log(`${name} -> ${contacts[name]}`);};
+     // alert (`Your contacts \n${contacts.name}`);
     
-// }
+ }
 
-// function addNewContact(){
-//         let contact = {};
-//         contact.name = prompt("write your name:", "");
-//         contact.phone = prompt("Write your phone number:", "");
-//         contact.email = prompt("Write you email:", "");
-//         if (contact.name !== "" || contact.phone !== "" || contact.email !== "") { contacts.push(contact);
-//         } else { alert("Error. Contact information is missing")};
-// }
+ function addNewContact(){
+         let contact = {};
+         contact.name = prompt("write your name:", "");
+         contact.phone = prompt("Write your phone number:", "");
+         contact.email = prompt("Write you email:", "");
+         if (contact.name !== "" || contact.phone !== "" || contact.email !== "") { contacts.push(contact);
+         } else { alert("Error. Contact information is missing")};
+ }
 
-// function userChoice(userAction){
-//     if (userAction <3 ){
-//         return showContact(userAction);
-//     } else if ( userAction == 3 ){
-//         return showAllContacts();
-//     } else if (userAction == 4) { 
-//         return addNewContact(); 
-//     } else if (userAction == 5){
-//         return alert("Tak for denne gang");
-//     } else {
-//         return;
-//         // return getUserAction();
-//     }
-// }
+ function userChoice(userAction){
+     if (userAction <3 ){
+         return showContact(userAction);
+     } else if ( userAction == 3 ){
+         return showAllContacts();
+     } else if (userAction == 4) { 
+         return addNewContact(); 
+     } else if (userAction == 5){
+         return alert("Tak for denne gang");
+     } else {
+         return;
+         // return getUserAction();
+     }
+ }
 
-// function operation(callback, callbackVariable , contactsVariable ){
-//    callback(callbackVariable);
-// }
+ function operation(callback, callbackVariable , contactsVariable ){
+    callback(callbackVariable);
+ }
 
-// // operation(userChoice, userAction, continue);
-// operation(userChoice, userAction);
+ // operation(userChoice, userAction, continue);
+ operation(userChoice, userAction);
 
 // //5.10.1.8
 
