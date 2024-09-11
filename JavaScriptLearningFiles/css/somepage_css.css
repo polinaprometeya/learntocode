@@ -1,18 +1,49 @@
 .parent {
     display: flex;
     height: 300px; /* Or whatever */
-  }
-
-  .main_pagearea {
-    grid-area: main;
     font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
-    
   }
 
-  .header_area{
+/*Well I kind of skipped header... Tabs are in main body*/
+  /* .header_area{
    grid-area: header; 
-  }
+  } */
 
+/* Set height of body /html and the document to 100%. I think I need to rename stuff here */
+.main_pagearea {
+  grid-area: main;
+  height: 100%;
+  margin: 0;
+
+  * {box-sizing: border-box}
+  
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+
+/* Tab Content Home */
   .banner{
   /* Use "linear-gradient" to add a darken background effect to the image used. This will make the text easier to read */
   background-image: 
@@ -38,28 +69,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   }
-  
-  .button{
-    background-color: #679088;
-    border-radius: 4px;
-    border-style: none;
-
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 5%;
-    padding: 9px 20px 8px;
-
-    position: center;
-    user-select: none;
-    touch-action: manipulation;
-    width: 30%;
-  }
-
 
   input[type=file]::file-selector-button {
    
@@ -80,14 +89,35 @@
     padding: 9px 20px 8px;
   }
 
-  .sidebar_area {
+  /* General body page content Content Home */
+  .button{
+    background-color: #679088;
+    border-radius: 4px;
+    border-style: none;
+
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 5%;
+    padding: 9px 20px 8px;
+
+    position: center;
+    user-select: none;
+    touch-action: manipulation;
+    width: 30%;
+  }
+/*NO sidebar for now...*/
+  /* .sidebar_area {
     grid-area: sidebar;
-  }
-  .footer_area {
-    grid-area: footer;
-  }
-  
+  } */
+
+    /* Making seperate containers with different sdettings body page content Content Home */
   .container {
+    background-color: #edecec ;
     display: grid;
     grid-template-columns: 50px 50px 50px 50px;
     grid-template-rows: auto;
@@ -97,3 +127,8 @@
       "footer footer footer footer";
   }
 
+  /* Do something for footer*/
+  .footer_area {
+    grid-area: footer;
+  }
+  

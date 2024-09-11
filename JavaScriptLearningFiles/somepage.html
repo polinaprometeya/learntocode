@@ -17,28 +17,55 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
-    <div class="banner" >
-    <h1>Welcome to CO2 Emission Calculator</h1>
-    <h5>Calculate your scope 1 emissions</h5>
-     <style>  
-     .banner{background-image: url(Assets/growth_wix_clean.png);}
-     </style>
-
-      <button 
-      class="button">
-      Sign up for free today</button>
-
-      <input
-      class = "button"
-      type="file"
-      id="docpicker"
-      accept=".doc,.docx,.xml,Assets" >
-      </input>
-    </div>
+        <button class="tablink" onclick="openPage('Home', this, color)"id="defaultOpen">Home</button>
+        <button class="tablink" onclick="openPage('Calculator', this, color)">Calculator</button>
+        <button class="tablink" onclick="openPage('Contact', this, color)">Contact</button>
+        <button class="tablink" onclick="openPage('About', this, color)">About</button>
         
-    <script src="somepage_javascript.js" async defer>
-    </script>
+        <div id="Home" class="tabcontent">
+
+          <div class="banner" >
+            <h1>Welcome to CO2 Emission Calculator</h1>
+            <h5>Calculate your scope 1 emissions</h5>
+             <style>  
+             .banner{background-image: url(Assets/growth_wix_clean.png);}
+             </style>
+        
+              <!-- <button 
+              class="button">
+              Sign up for free today</button> -->
+        
+              <input
+              class = "button"
+              type="file"
+              id="docpicker"
+              accept=".doc,.docx,.xml,Assets" >
+              </input>
+            </div>
+        </div>
+        
+        <div id="Calculator" class="tabcontent">
+          <h3>Calculator</h3>
+          <p>Some news this fine day!</p> 
+        </div>
+        
+        <div id="Contact" class="tabcontent">
+          <h3>Contact</h3>
+          <p>Get in touch, or swing by for a cup of coffee.</p>
+        </div>
+        
+        <div id="About" class="tabcontent">
+          <h3>About</h3>
+          <p>Who we are and what we do.</p>
+        </div>
+        
+        <script src="somepage_javascript.js" async defer>
+        </script>
+    
+
+        
+
+
     </body>
 </html>
 <!-- 1. Introduktion:
