@@ -12,85 +12,120 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/somepage_css.css">
     </head>
-    <body class="main_pagearea ">
-        <!-- <p>This is a blank page, or is it?</p> -->
-        <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <button class="tablink" onclick="openPage('Home', this, color)"id="defaultOpen">Home</button>
-        <button class="tablink" onclick="openPage('Calculator', this, color)">Calculator</button>
-        <button class="tablink" onclick="openPage('Contact', this, color)">Contact</button>
-        <button class="tablink" onclick="openPage('About', this, color)">About</button>
+    <body>
+ 
+        <header class="header">
+                <!-- <p>This is a blank page, or is it?</p> -->
+                <!--[if lt IE 7]>
+                    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+                <![endif]-->
+            <div>
+                <h1>Header</h1>
+            </div>
+        </header>
+   
+        <main class="main">
+                <button class="tablink" onclick="openPage('Home', this, color)"id="defaultOpen">Home</button>
+                <button class="tablink" onclick="openPage('Calculator', this, color)">Calculator</button>
+                <button class="tablink" onclick="openPage('Contact', this, color)">Contact</button>
+                <button class="tablink" onclick="openPage('About', this, color)">About</button>
+                
+                <div id="Home" class="tabcontent">
         
-        <div id="Home" class="tabcontent">
+                <div class="banner" >
+                    <h1>Welcome to CO2 Emission Calculator</h1>
+                    <h5>Calculate your scope 1 emissions</h5>
+                     <style>  
+                     .banner{background-image: url(Assets/growth_wix_clean.png);}
+                     </style>
+                
+                      <!-- <button 
+                      class="button">
+                      Sign up for free today</button> -->
+                
+                      <input col = 6
+                      class = "button"
+                      type="file"
+                      id="docpicker"
+                      accept=".doc,.docx,.xml,Assets" >
+                      </input>
+                </div>
+        
+                <div class="container">
+                    <p>This is text and there some more text. With text on.</p>
+                </div>
+        
+                </div>
+                
+                <div id="Calculator" class="tabcontent">
+                  <h3>Calculator</h3>
+                  <!-- <form action="/somepage_calculator_form.php"> -->
+                    <form class ="formcontent">
+                    <div class="row">
+                        <label for="electricity">Electricity</label>
+                        <input type="number" id="electricity" name="electricity" placeholder="Your Electricity Consomption in kWh">
+                    </div>
+        
+                    <div class="row">
+                        <label for="country">Country</label>
+                        <input type="text" id="heat" name="heat" placeholder="Your Heat consomption in kWh">
+                    </div>
+        
+                    <div class="row">
+                    <label for="country">Country of operation</label>
+                    <select id="country" name="country">
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                    </select>
+                    </div>
+        
+                    <div class="row">
+                        <input type="submit" value="Submit">
+                    </div>
+                    </form>
+                </div>
+        
+                <div id="Contact" class="tabcontent">
+                        <h3>Contact</h3>
+                        <p>Get in touch.</p>
+        
+                        <div class="container">
+                          <form class="formcontent">
+                            <div class="row">
+                                <label for="fname">First Name</label>
+                                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                            </div>
+                            <div class="row">
+                                <label for="lname">Last Name</label>
+                                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                            </div>
+                            <div class="row">
+                                <label for="subject">Subject</label>
+                                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                            </div>
+                            <div class="row">
+                              <input type="submit" value="Submit">
+                            </div>
+                          </form>
+                        </div>
+                </div>
+                
+                <div id="About" class="tabcontent">
+                  <h3>About</h3>
+                  <p>Who we are and what we do.</p>
+                </div>
 
-          <div class="banner" col = 12>
-            <h1>Welcome to CO2 Emission Calculator</h1>
-            <h5>Calculate your scope 1 emissions</h5>
-             <style>  
-             .banner{background-image: url(Assets/growth_wix_clean.png);}
-             </style>
-        
-              <!-- <button 
-              class="button">
-              Sign up for free today</button> -->
-        
-              <input col = 6
-              class = "button"
-              type="file"
-              id="docpicker"
-              accept=".doc,.docx,.xml,Assets" >
-              </input>
+        </main>
+       
+        <footer class="footer">
+            <div class ="footer_area">
+                <p>This is a footer. Some text here.</p>
             </div>
-        </div>
-        
-        <div id="Calculator" class="tabcontent">
-          <h3>Calculator</h3>
-          <!-- <form action="/somepage_calculator_form.php"> -->
-            <form class ="formcontent">
-            
-            <div class="row">
-                <label for="electricity">Electricity</label>
-                <input type="number" id="electricity" name="electricity" placeholder="Your Electricity Consomption in kWh">
-            </div>
-
-            <div class="row">
-                <label for="country">Country</label>
-                <input type="text" id="heat" name="heat" placeholder="Your Heat consomption in kWh">
-            </div>
-
-            <div class="row">
-            <label for="country">Country of operation</label>
-            <select id="country" name="country">
-            <option value="australia">Australia</option>
-            <option value="canada">Canada</option>
-            <option value="usa">USA</option>
-            </select>
-            </div>
-
-            <div class="row">
-                <input type="submit" value="Submit">
-            </div>
-            </div>
-            </form>
-     
-        
-        <div id="Contact" class="tabcontent">
-          <h3>Contact</h3>
-          <p>Get in touch, or swing by for a cup of coffee.</p>
-        </div>
-        
-        <div id="About" class="tabcontent">
-          <h3>About</h3>
-          <p>Who we are and what we do.</p>
-        </div>
-        
+        </footer>
+  
         <script src="somepage_javascript.js" async defer>
         </script>
-    
-
-        
-
 
     </body>
 </html>
@@ -101,11 +136,12 @@ Formålet med denne opgave er at udvikle en responsiv hjemmeside ved hjælp af H
 
     Siden skal have følgende sektioner:
         Header med navigation
-        Hero-banner
+        Hero-bannerß
         Om-sektion
         Services/produkter
         Kontaktformular
         Footer
+        
     Siden skal være responsiv og fungere på forskellige skærmstørrelser (mobil, tablet og desktop).
     Brug af CSS Flexbox eller Grid til at organisere layoutet.
     Brug af medieforespørgsler (media queries) for at tilpasse layoutet til forskellige skærmstørrelser.

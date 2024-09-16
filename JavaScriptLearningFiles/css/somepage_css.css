@@ -1,208 +1,222 @@
 .parent {
     display: flex;
-    height: 300px; /* Or whatever */
     font-family: "Farfetch Basis","Helvetica Neue",Arial,sans-serif;
-  }
 
-/*Well I kind of skipped header... Tabs are in main body*/
-  /* .header_area{
+    
+  }
+      /* Responsive ßlayout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1000px) {
+.input[type=submit] {
+          width: 100%;
+          margin-top: 0;
+}
+
+.button{
+          width: 100%;
+}
+}
+
+.header{
    grid-area: header; 
-  } */
+   margin: 0;
+   background-color: #46625E;
+   height: 20 px;
+  } 
 
 /* Set height of body /html and the document to 100%. I think I need to rename stuff here */
-.main_pagearea {
+.main {
   grid-area: main;
   height: 100%;
   margin: 0;
-
   * {box-sizing: border-box}
   
-}
-
-/* Style tab links */
-.tablink {
-  background-color: #555;
-  color: white;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 25%;
-
-  .tablink:hover {
-    background-color: #777;
-  }
-}
-
-/* Style the tab content (and add height:100% for full page content) */
-.tabcontent {
-  color: white;
-  display: none;
-  padding: 100px 20px;
-  height: 100%;
-}
-
-/* Tab Content Home */
-  .banner{
-
-  /* Use "linear-gradient" to add a darken background effect to the image used. This will make the text easier to read */
-  background-image: 
-    linear-gradient(
-    rgba(0, 0, 0, 0.5), 
-    rgba(0, 0, 0, 0.5)), 
-    url("Assets/growth_wix_clean.png");
-  width: 100%;
-  height: 50%;
-        
-  /* Position and center the image to scale nicely on all screens */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  text-align: center;
-  text-transform: none;      
-  text-align: center;
-  color: #7382af;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  input[type=file]::file-selector-button {
-   
+  /* Style tab links */
+  .tablink {
+    background-color: #46625E;
+    color: white;
+    float: left;
     border: none;
-    background-color: #679088;
-    border-radius: 10px;
-    border: 1px solid #fff;
-    font-weight: 700;
-    color: #fff;
+    outline: none;
     cursor: pointer;
-    text-overflow: none;
-    transition: background .2s ease-in-out; 
-    padding: 9px 20px 8px;
-  }
-  
-  input[type=file]::file-selector-button:hover {
-    background: #0b3c33;
-    padding: 9px 20px 8px;
-  
-  }
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
 
-  }
+    .tablink:hover {
+      background-color: #2b3d3a;
 
-
-  /* Calculations Tab Form */
-  .formcontent{
-    width: 50%;
-    margin: auto;
-    background-color: transparent #679088;
-    color: #679088;
-    border: 1px solid #edeeee;
-    
-  
-
-  label {
-      padding: 10px 10px 10px 10px;
-      display: inline-block;
     }
+  }
 
-  input[type=number], select, textarea {
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+    height: 100%;
+
+
+  }
+
+    /* Calculations Tab Form */
+    .formcontent{
+      width: 50%;
+      margin: auto;
+      background-color: 50% #679088;
+      color: #679088;
+      border: 1px solid #edeeee;
+      padding: 10px 10px 10px 10px;
+      
+    
+
+    label {
+        padding: 10px 10px 10px 10px;
+        display: inline-block;
+      }
+
+    input[type=number], select, textarea {
+        width: 100%;
+      
+        padding: 10px 10px 10px 10px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        resize: vertical;
+      }
+      
+    input[type=text], select, textarea {
       width: 100%;
-     
+    
       padding: 10px 10px 10px 10px;
       border: 1px solid #ccc;
       box-sizing: border-box;
       resize: vertical;
     }
     
-  input[type=text], select, textarea {
-    width: 100%;
-   
-    padding: 10px 10px 10px 10px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-    resize: vertical;
-  }
-  
-  input[type=submit] {
-    background-color: #679088;
-    
-    color: white;
-    padding: 10px 20px 10px 10px;
-    border: none;
-    box-sizing: border-box;
-    cursor: pointer;
-    float: right;
-
-    input[type=submit]:hover {
+    input[type=submit] {
       background-color: #679088;
+      
+      color: white;
+      padding: 10px 20px 10px 10px;
+      border: none;
+      box-sizing: border-box;
+      cursor: pointer;
+      float: right;
+
+      input[type=submit]:hover {
+        background-color: #679088;
+      }
     }
-  }
-  
+    
 
 
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
 
-    display: inline-block;
-    width: 100%; 
-    height: 5px;
-    margin: 5px;
-  }
-  
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-    .col-25, .col-75, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
+      display: inline-block;
+      width: 100%; 
+      height: 5px;
+      margin: 5px;
     }
-  } 
+    
+ 
 
-  }
+    }
 
-  /* General body page content Content Home */
-  .button{
-    background-color: #679088;
-    border-radius: 4px;
-    border-style: none;
+    /* General body page content Content Home */
+    .button{
+      background-color: #679088;
+      border-radius: 4px;
+      border-style: none;
 
-    box-sizing: border-box;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      display: inline-block;
 
-    font-size: 16px;
-    line-height: 1.5;
-    margin: 5%;
-    padding: 9px 20px 8px;
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 5%;
+      padding: 9px 20px 8px;
 
-    position: center;
-    user-select: none;
-    touch-action: manipulation;
-    width: 30%;
-  }
+      position: center;
+      user-select: none;
+      touch-action: manipulation;
+      width: 30%;
 
+      
+
+      
+    }
+}
+
+      /* Tab Content Home */
+      .banner{
+
+        /* Use "linear-gradient" to add a darken background effect to the image used. This will make the text easier to read */
+        background-image: 
+          linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0, 0, 0, 0.5)), 
+          url("Assets/growth_wix_clean.png");
+        width: 100%;
+        height: 50%;
+              
+        /* Position and center the image to scale nicely on all screens */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        text-align: center;
+        text-transform: none;      
+        text-align: center;
+        color: #7382af;
+    
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    
+        input[type=file]::file-selector-button {
+        
+          border: none;
+          background-color: #679088;
+          border-radius: 10px;
+          border: 1px solid #fff;
+          font-weight: 700;
+          color: #fff;
+          cursor: pointer;
+          text-overflow: none;
+          transition: background .2s ease-in-out; 
+          padding: 9px 20px 8px;
+        }
+        
+        input[type=file]::file-selector-button:hover {
+          background: #0b3c33;
+          padding: 9px 20px 8px;
+        
+        }
+    
+        }
 
     /* Making seperate containers with different sdettings body page content Content Home */
   .container {
     background-color: #edecec ;
     display: grid;
-    grid-template-columns: 50px 50px 50px 50px;
+ 
     grid-template-rows: auto;
     grid-template-areas: 
       "header header header header"
-      "main main . sidebar"
+      "main main"
       "footer footer footer footer";
+      padding: 80px 10px 5px 5px;
   }
 
   /* Do something for footer*/
-  .footer_area {
+  .footer {
     grid-area: footer;
+    margin: 0;
   }
   
