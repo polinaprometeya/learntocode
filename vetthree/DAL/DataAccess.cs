@@ -20,25 +20,27 @@ public class DataAccess
     //    return ConnectionString;
     //}
 
+
+
     public List<Patient> getData()
     {
         List<Patient> patientData = new List<Patient>();
 
+        string ConnectionString = "Server=localhost;Database=sustainmeasure;User=sa;Password=f9Ett?FnLdqfE.docker;Encrypt=False;";
+        //string ConnectionString = "DefaultConnection = Data Source=model-e39f7674-4c78-453c-94a4-4b39fbd9da76.db";
+        using (SqlConnection conn = new SqlConnection(
 
-        using (SqlConnection conn = new SqlConnection(new SqlConnectionStringBuilder()
-        {
-            DataSource = "localhost",
-            InitialCatalog = "sustainmeasure",
-            UserID = "sa",
-            Password = "f9Ett?FnLdqfE.docker"
-        }.ConnectionString))
+    //    new SqlConnectionStringBuilder() { DataSource = "localhost", InitialCatalog = "sustainmeasure",UserID = "sa", Password = "f9Ett?FnLdqfE.docker",}.ConnectionString
+
+        ConnectionString
+        ))
         {
             try
             {
                 conn.Open();
                 using (SqlCommand cmd = new SqlCommand())
                 {
-                    cmd.CommandText = "SELECT id_animal, name_animal, date_animal, type_animal, id_customer FROM animal";
+                    cmd.CommandText = "SELECT id_animal, name_animal, date_birth, type_animal, id_customer FROM animal";
                     cmd.Connection = conn;
                     cmd.ExecuteNonQuery();
 
@@ -49,7 +51,7 @@ public class DataAccess
                         {
                             id_animal = sqlData.GetInt32(0),
                             name_animal = sqlData.GetString(2),
-                            date_animal = sqlData.GetDateTime(3),
+                            date_birth = sqlData.GetDateTime(3),
                             type_animal = sqlData.GetString(4),
                             id_customer = sqlData.GetInt32(1),
                         });
@@ -58,9 +60,9 @@ public class DataAccess
                 }
             }
 
-            catch (Exception)
+            catch (Exception e)
             {
-                Console.WriteLine("Something went wrong");
+                Console.WriteLine(e.Message);
             }
             conn.Close();
             return patientData;

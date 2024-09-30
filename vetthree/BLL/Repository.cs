@@ -3,7 +3,7 @@ using DAL;
 namespace BLL;
 
 
-public class BLL
+public class Repository
 {
     public List<Patient> GetPatients()
     {
@@ -17,7 +17,7 @@ public class BLL
             {
                 id_animal = item.id_animal,
                 name_animal = item.name_animal,
-                date_animal = item.date_animal,
+                date_birth = item.date_birth,
                 type_animal = item.type_animal,
                 id_customer = item.id_customer
             });
