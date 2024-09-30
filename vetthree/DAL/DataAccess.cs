@@ -7,33 +7,30 @@ public class DataAccess
 {
     //public string ConfigureServices()
     //{
+    //    new SqlConnectionStringBuilder() { DataSource = "localhost", InitialCatalog = "vetthree",UserID = "sa", Password = "f9Ett?FnLdqfE.docker",}.ConnectionString
+
+    //string ConnectionString = "DefaultConnection = Data Source=model-e39f7674-4c78-453c-94a4-4b39fbd9da76.db";
+
     //    string ConnectionString =
     //        "Data Source=localhost;"+
-    //        "Initial Catalog=sustainmeasure;"+
+    //        "Initial Catalog=vetthree;"+
     //        "User id=sa;"+
     //        "Password=Secret;";
 
-    //    //string ConnectionString = "Server=localhost;Database=sustainmeasure;User=sa;Password=f9Ett?FnLdqfE.docker;";
+    //    //string ConnectionString = "Server=localhost;Database=vetthree;User=sa;Password=f9Ett?FnLdqfE.docker;";
 
     //    //_ = new ConfigurationBuilder().AddJsonFile("appsettings.json")
     //    //   .AddEnvironmentVariables().Build();
     //    return ConnectionString;
     //}
 
-
-
     public List<Patient> getData()
     {
         List<Patient> patientData = new List<Patient>();
 
-        string ConnectionString = "Server=localhost;Database=sustainmeasure;User=sa;Password=f9Ett?FnLdqfE.docker;Encrypt=False;";
-        //string ConnectionString = "DefaultConnection = Data Source=model-e39f7674-4c78-453c-94a4-4b39fbd9da76.db";
-        using (SqlConnection conn = new SqlConnection(
+        string ConnectionString = "Server=localhost;Database=vetthree;User=sa;Password=f9Ett?FnLdqfE.docker;Encrypt=False;";
 
-    //    new SqlConnectionStringBuilder() { DataSource = "localhost", InitialCatalog = "sustainmeasure",UserID = "sa", Password = "f9Ett?FnLdqfE.docker",}.ConnectionString
-
-        ConnectionString
-        ))
+        using (SqlConnection conn = new SqlConnection(ConnectionString))
         {
             try
             {
@@ -51,7 +48,7 @@ public class DataAccess
                         {
                             id_animal = sqlData.GetInt32(0),
                             name_animal = sqlData.GetString(2),
-                            date_birth = sqlData.GetDateTime(3),
+                            date_birth = (DateTime)sqlData.GetSqlDateTime(3),
                             type_animal = sqlData.GetString(4),
                             id_customer = sqlData.GetInt32(1),
                         });
