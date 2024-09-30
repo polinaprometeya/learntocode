@@ -1,0 +1,6 @@
+﻿{
+    "ConnectionStrings": {
+        "DefaultConnection": "Server=localhost;Database=sustainmeasure;User=sa;Password=f9Ett?FnLdqfE.docker;"
+    }
+}
+
