@@ -47,10 +47,10 @@ public class DataAccess
                         patientData.Add(new Patient
                         {
                             id_animal = sqlData.GetInt32(0),
-                            name_animal = sqlData.GetString(2),
-                            date_birth = (DateTime)sqlData.GetSqlDateTime(3),
-                            type_animal = sqlData.GetString(4),
-                            id_customer = sqlData.GetInt32(1),
+                            name_animal = sqlData.GetString(1),
+                            date_birth = (DateTime)sqlData.GetSqlDateTime(2),
+                            type_animal = sqlData.GetString(3),
+                            id_customer = sqlData.GetInt32(4),
                         });
                         Console.WriteLine(conn);
                     }
