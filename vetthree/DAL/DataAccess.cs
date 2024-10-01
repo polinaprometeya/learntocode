@@ -7,17 +7,17 @@ public class DataAccess
 {
     //public string ConfigureServices()
     //{
-    //    new SqlConnectionStringBuilder() { DataSource = "localhost", InitialCatalog = "vetthree",UserID = "sa", Password = "f9Ett?FnLdqfE.docker",}.ConnectionString
+    //    new SqlConnectionStringBuilder() { DataSource = "**", InitialCatalog = "**",UserID = "**", Password = "**",}.ConnectionString
 
     //string ConnectionString = "DefaultConnection = Data Source=model-e39f7674-4c78-453c-94a4-4b39fbd9da76.db";
 
     //    string ConnectionString =
-    //        "Data Source=localhost;"+
-    //        "Initial Catalog=vetthree;"+
+    //        "Data Source=**;"+
+    //        "Initial Catalog=**;"+
     //        "User id=sa;"+
     //        "Password=Secret;";
 
-    //    //string ConnectionString = "Server=localhost;Database=vetthree;User=sa;Password=f9Ett?FnLdqfE.docker;";
+    //    //string ConnectionString = "Server=**;Database=**;User=**;Password=**;";
 
     //    //_ = new ConfigurationBuilder().AddJsonFile("appsettings.json")
     //    //   .AddEnvironmentVariables().Build();
@@ -28,7 +28,7 @@ public class DataAccess
     {
         List<Patient> patientData = new List<Patient>();
 
-        string ConnectionString = "Server=localhost;Database=vetthree;User=sa;Password=f9Ett?FnLdqfE.docker;Encrypt=False;";
+        string ConnectionString = "Server=**;Database=**;User=**;Password=**;Encrypt=False;";
 
         using (SqlConnection conn = new SqlConnection(ConnectionString))
         {
