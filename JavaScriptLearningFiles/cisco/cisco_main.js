@@ -1,18 +1,72 @@
+console.log( "I am working");
+//6.1.8
+
+function div(a, b) {
+    if (b == 0) {
+        throw new RangeError("Can't divide by 0");
+    }
+    return a / b;
+}
+console.log(div(4, 2)); // -> 2
+console.log(div(4, 0)); // -> Uncaught RangeError: Can’t divide by 0
+
+//6.2.5
+function outer() {
+    let name = "outer";
+    let str = inner();
+    return str;
+}
+ 
+function inner() {
+    let name = "inner";
+    console.log(name); // -> inner
+    console.time(name);
+    return "Hello !";
+}
+ 
+console.log("before outer() call");
+// debugger;
+console.log(outer());
+console.log("after outer() call");
 
 
-/**Exercise 6.1.8.2: The following array of numbers has been declared:
- * let numbers = [10, 40, 0, 20, 50];
-Write a program that, in a loop, divides the number 1000 by successive elements of the numbers array, displaying the result of each division. 
-To divide the numbers, use the function from the previous task. 
-Use the try...catch construction to handle an exception thrown in the case of division by zero. 
-If such an exception is caught, the program should print an appropriate message (taken from the exception)
- and continue its operation (division by successive elements of the array).
- */
+//6.2.11
+let part = 0;
+console.time('Leibniz');
+for (let k = 0; k < 10000000; k++) {
+    part = part + ((-1) ** k) / (2 * k + 1);
+}
+console.timeEnd('Leibniz'); // -> Leibniz: 456.60498046875 ms
+let pi = part * 4;
+console.log(pi); // -> 3.1415925535897915
 
-let numbers = [10, 40, 0, 20, 50];
+//6.2.13.1
+let end = 5; 
+for(let i=1; i<=end; i++){
+    console.log(i); 
+}
+//6.2.13.2
+let counter = 0; 
+let maxValue = 10; 
+let result = 1; 
+ 
+// debugger; 
+for (counter = 0; counter < maxValue; counter++) { 
+    console.log(result); 
+    result *= maxValue - counter - 1; 
+} 
+console.log("Final result: ", result);
 
-
-numbers.forEach( numbers => {console.log(numbers); try { 1000/numbers} catch (error){ error = 1000/0}
-});
-
-console.log(numbers, ",");
+//6.2.13.3
+function max(array) { 
+    let maxValue = array[1]; 
+    for(let i=1; i<maxValue; i++){
+        if(array[i] > maxValue) { 
+            maxValue = array[i]; 
+        } 
+    } 
+    return console.log("6.2.13.3 maxValue: ", maxValue); 
+} 
+ 
+console.log( max([1, 4, 6, 2])); // -> 6 
+console.log( max([10, 4, 6, 2])); // -> 6

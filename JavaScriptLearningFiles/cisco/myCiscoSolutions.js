@@ -1,3 +1,23 @@
+
+
+// /**Exercise 6.1.8.2: The following array of numbers has been declared:
+//  * let numbers = [10, 40, 0, 20, 50];
+// Write a program that, in a loop, divides the number 1000 by successive elements of the numbers array, displaying the result of each division. 
+// To divide the numbers, use the function from the previous task. 
+// Use the try...catch construction to handle an exception thrown in the case of division by zero. 
+// If such an exception is caught, the program should print an appropriate message (taken from the exception)
+//  and continue its operation (division by successive elements of the array).
+//  */
+
+// let numbers = [10, 40, 0, 20, 50];
+
+
+// numbers.forEach( numbers => {console.log(numbers); try { 1000/numbers} catch (error){ error = 1000/0}
+// });
+
+// console.log(numbers, ",");
+
+
 // /**Exercise 6.1.8.1: 
 // Write your own div function that will take two call arguments and return the result of dividing the first argument by the second. 
 // In JavaScript, the result of dividing by zero is the value Infinity (or -Infinity, if we try to divide a negative number). 
@@ -5,12 +25,12 @@
 // Prepare a test call of the function for both valid division and division by zero. */
 
 
- let div =  (a, b) => { 
-     if (b == 0) { 
-         throw new RangeError("You cannot divide by 0");} 
-     return a / b; };
+//  let div =  (a, b) => { 
+//      if (b == 0) { 
+//          throw new RangeError("You cannot divide by 0");} 
+//      return a / b; };
 
- console.log("division", div(4,1));
+//  console.log("division", div(4,1));
 
 
 // /* Exersize 5.1.11
@@ -27,685 +47,685 @@
 //     before adding a new contact, check if the passed argument is an array and if the new contact data have any value.
 //  */
 
- let contacts = [{
-     name: "Maxwell Wright",
-     phone: "(0191) 719 6495",
-     email: "Curabitur.egestas.nunc@nonummyac.co.uk"
-     }, {
-     name: "Raja Villarreal",
-     phone: "0866 398 2895",
-     email: "posuere.vulputate@sed.com"
-     }, {
-     name: "Helen Richards",
-     phone: "0800 1111",
-     email: "libero@convallis.edu"
-     }];
+//  let contacts = [{
+//      name: "Maxwell Wright",
+//      phone: "(0191) 719 6495",
+//      email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+//      }, {
+//      name: "Raja Villarreal",
+//      phone: "0866 398 2895",
+//      email: "posuere.vulputate@sed.com"
+//      }, {
+//      name: "Helen Richards",
+//      phone: "0800 1111",
+//      email: "libero@convallis.edu"
+//      }];
 
     
- let userAction = prompt("What do you want to do 1) Display the first contact, 2) Display the last contact, 3) Display all contacts, 4)Add new contact or 5)Stop here?", 0);
+//  let userAction = prompt("What do you want to do 1) Display the first contact, 2) Display the last contact, 3) Display all contacts, 4)Add new contact or 5)Stop here?", 0);
 
- let continue = true; 
+//  let continue = true; 
 
- function getUserAction(userAction){
-     let userAction = prompt("What do you want to do 1) Display the first contact, 2) Display the last contact, 3) Display all contacts, 4)Add new contact or 5)Stop here?", 0);
- }
-
-
- function showContact(userAction){
-    if (userAction == 1){
-         alert(`The current first contact is: ${contacts[0].name}`);
-     } else if(userAction == 2){
-         let lastConact = contacts.length - 1;
-         alert(`Current the last contact is: ${contacts[lastConact].name}`);
-     } else return userAction;
- }
-
- function showAllContacts(){
-     let list = "";
-     let count = 1;
-     contacts.forEach(contact => {
-     list += ' ' + count + '. ' + contact.name + '\n';
-     count++;
-     });
-      alert(`Your contacts \n${list}`); 
-     // for( let name in contacts) { console.log(`${name} -> ${contacts[name]}`);};
-     // alert (`Your contacts \n${contacts.name}`);
-    
- }
-
- function addNewContact(){
-         let contact = {};
-         contact.name = prompt("write your name:", "");
-         contact.phone = prompt("Write your phone number:", "");
-         contact.email = prompt("Write you email:", "");
-         if (contact.name !== "" || contact.phone !== "" || contact.email !== "") { contacts.push(contact);
-         } else { alert("Error. Contact information is missing")};
- }
-
- function userChoice(userAction){
-     if (userAction <3 ){
-         return showContact(userAction);
-     } else if ( userAction == 3 ){
-         return showAllContacts();
-     } else if (userAction == 4) { 
-         return addNewContact(); 
-     } else if (userAction == 5){
-         return alert("Tak for denne gang");
-     } else {
-         return;
-         // return getUserAction();
-     }
- }
-
- function operation(callback, callbackVariable , contactsVariable ){
-    callback(callbackVariable);
- }
-
- // operation(userChoice, userAction, continue);
- operation(userChoice, userAction);
-
-// //5.10.1.8
-
-function fibbRec(n) { 
-    temp1 = 0;
-    temp2 = 1;
-    next_value = 0;
-
-for(i=0; i<n; i++){
-    next_value = temp1 + temp2;
-    temp1 = temp2;
-    temp2 = next_value;
-}
-return temp1;
-} 
-
- 
-console.log(fibbRec(0)); // -> 0
-console.log(fibbRec(1)); // -> 1
-console.log(fibbRec(4)); // -> 3
-console.log(fibbRec(7)); // -> 13
-console.log(fibbRec(9)); // -> 34
-console.log(fibbRec(11)); // -> 89
-    
-
-
-//5.10.1.7
-
-let fibbRec =  (n) => { if (n != 0) {n === 1 ? retVal = 1 : retVal = fibbRec(n - 1) + fibbRec(n - 2); return retVal; } else {return retVal = 0;}} 
-
- 
-console.log(fibbRec(0)); // -> 0
-console.log(fibbRec(1)); // -> 1
-console.log(fibbRec(4)); // -> 3
-console.log(fibbRec(7)); // -> 13
-console.log(fibbRec(9)); // -> 34
-console.log(fibbRec(11)); // -> 89
-    
-
-//5.10.1.6
-
-let fibbRec = function (n) {
-    let retVal = 0;
-    if (n != 0) {
-        if (n === 1) {
-            retVal = 1;
-        } else {
-            retVal = fibbRec(n - 1) + fibbRec(n - 2);
-        }
-    }
-    return retVal;
-}
-
-console.log(fibbRec(4)); // -> 3
-console.log(fibbRec(7)); // -> 13
-console.log(fibbRec(9)); // -> 34
-console.log(fibbRec(11)); // -> 89
-
-// wrong
-// function fibonacci (f) {
-//     while (n > 1) {
-//         result = n-1 + n-2;
-//         n--;
-//     }
-//     return result;
-// }
-// console.log(fibonacci(9)); 
-
-// let fibonacciNumber = (f) => f == 1 ? 1 : fibonacci(f);
-// console.log(fibonacciNumber(9));
-
-
-
-
-/*// Exercise 5.10.1.5
-Write a program that will print out (to the console) consecutive integers 10 times,
- in two-second intervals (start with the number 1). 
-Use the functions setInterval, clearInterval and setTimeout.*/
-
-
-//based on their solution
-let counter = 10;
-let intervalId = setInterval(function () {
-    console.log(counter--);
-}, 1000);
-setTimeout(function () {
-    clearInterval(intervalId)
-}, 11000);
-
-
-//------------------wrong
-// let interval = function() {
-//     let timerId = setInterval(1000) /*ms*/;
-//     setTimeout(function(){clearInterval(timerId);}, 5500);
-// }
-
-// let counter = function (callback){
-//     for( i=10; i>0; i-- ){ 
-//         interval(callback);
-//         console.log("count",i);
-//     }
-// }
-// counter(interval);
-
-
-//------------------wrong
-// let setInterval = (a)=>{
-    
-//     console.log("wait", a, "ms");
-//     return  setTimeout(countdown, a);    
-    
-// };
-
-// let countdown = (callback, a)=>{
-    
-//     for( i=10; i>0; i-- ){
-//         callback(a);
-//         console.log(i);
-//     }
-// }
-
-// countdown(setInterval, 1000);
-
-// let clearInterval = (a)=>{
-//     if (a!== NaN){clearTimeout(a);} else {return;}
-// };
-
-
-//------------------wrong
-// // let setInterval = ()=>{
-// //     for (let i = 0; i < 10; i++) {
-
-// //         action();
-// //         console.log("wait", i)
-// //     }
-// // };
-// // let clearInterval = (a)=>{
-// //     clearTimeout(a);
-// // };
-
-// // let action = (setInterval, a)=>{
-// //  console.log("wait", a, "ms");
-// // setTimeout(setInterval, a)
-// // }
-    
-// // // for( i=10; i>0; i-- ){
-// // // setInterval(a);
-// // // console.log(i);
-// // // }
-
-
-// // setTimeout(setInterval, 2);
-
-
-// //Exercise 5.10.1.4
-
-let add = (a, b) => !Number.isInteger(a) || !Number.isInteger(b) ? NaN : a + b;
-let sub = (a, b) => !Number.isInteger(a) || !Number.isInteger(b) ? NaN : a - b;
-let mult = (a, b) => !Number.isInteger(a) || !Number.isInteger(b) ? NaN : a * b;
-
-let action =  function(callback, a, b){
-    console.log(callback(a,b));
-
-}
-
-action(add, 12, 10); // -> 22
-action(sub, 12, 10); // -> 2
-action(mult, 10, 10.1); // -> NaN
-
-
-
-// //Exercise 5.10.1.3
- 
-let add = (a, b) => (!Number.isInteger(a) || !Number.isInteger(b)) ? NaN : a + b;
-let sub = (a, b) => !Number.isInteger(a) || !Number.isInteger(b) ? NaN : a - b;
-let mult = (a, b) => !Number.isInteger(a) || !Number.isInteger(b) ? NaN :  a * b;
-
-console.log("control", add(10,1), sub(10,1) , mult(10,1));
-
-
-/**Exercise 5.10.1.2: 
- 
-Write three functions with the names add, sub, and mult, which will take two numerical arguments.
- The functions are to check if the given arguments are integers (use Number.isInteger). 
- If not, they return NaN, otherwise they return the result of addition, subtraction, or multiplication respectively. 
- The functions are to be declared using a function statement.
-Example of use and expected results:*/
-
-
-// let input1 =  Number(prompt("add first number"));
-// let input2 = Number(prompt("add second number"));
-
-function add(a,b){
-    if(Number.isInteger(a) && Number.isInteger(b)){
-        return a + b;
-    } else {return NaN;} 
-}
-
-function sub(a,b){
-    if(Number.isInteger(a) && Number.isInteger(b)){
-        return a - b;
-    } else {return NaN;}   
-}
-
-function mult(a,b){
-    if(Number.isInteger(a) && Number.isInteger(b)){
-        return a * b;
-    } else {return NaN;}
-}
-
-// function operations(a, b, add, sub, mult){
-//      if(typeof(a) === 'number' && typeof(b)  === 'number' ){
-//       add(a,b);
-//       sub(a,b);
-//       mult(a,b);
-//         alert ("Your numbers give reults of addition:", add, "subtraction", sub , "and multiplication", mult);
-//         console.log( "control", a, b, add, sub, mult);
+//  function getUserAction(userAction){
+//      let userAction = prompt("What do you want to do 1) Display the first contact, 2) Display the last contact, 3) Display all contacts, 4)Add new contact or 5)Stop here?", 0);
 //  }
+
+
+//  function showContact(userAction){
+//     if (userAction == 1){
+//          alert(`The current first contact is: ${contacts[0].name}`);
+//      } else if(userAction == 2){
+//          let lastConact = contacts.length - 1;
+//          alert(`Current the last contact is: ${contacts[lastConact].name}`);
+//      } else return userAction;
+//  }
+
+//  function showAllContacts(){
+//      let list = "";
+//      let count = 1;
+//      contacts.forEach(contact => {
+//      list += ' ' + count + '. ' + contact.name + '\n';
+//      count++;
+//      });
+//       alert(`Your contacts \n${list}`); 
+//      // for( let name in contacts) { console.log(`${name} -> ${contacts[name]}`);};
+//      // alert (`Your contacts \n${contacts.name}`);
+    
+//  }
+
+//  function addNewContact(){
+//          let contact = {};
+//          contact.name = prompt("write your name:", "");
+//          contact.phone = prompt("Write your phone number:", "");
+//          contact.email = prompt("Write you email:", "");
+//          if (contact.name !== "" || contact.phone !== "" || contact.email !== "") { contacts.push(contact);
+//          } else { alert("Error. Contact information is missing")};
+//  }
+
+//  function userChoice(userAction){
+//      if (userAction <3 ){
+//          return showContact(userAction);
+//      } else if ( userAction == 3 ){
+//          return showAllContacts();
+//      } else if (userAction == 4) { 
+//          return addNewContact(); 
+//      } else if (userAction == 5){
+//          return alert("Tak for denne gang");
+//      } else {
+//          return;
+//          // return getUserAction();
+//      }
+//  }
+
+//  function operation(callback, callbackVariable , contactsVariable ){
+//     callback(callbackVariable);
+//  }
+
+//  // operation(userChoice, userAction, continue);
+//  operation(userChoice, userAction);
+
+// // //5.10.1.8
+
+// function fibbRec(n) { 
+//     temp1 = 0;
+//     temp2 = 1;
+//     next_value = 0;
+
+// for(i=0; i<n; i++){
+//     next_value = temp1 + temp2;
+//     temp1 = temp2;
+//     temp2 = next_value;
+// }
+// return temp1;
+// } 
+
+ 
+// console.log(fibbRec(0)); // -> 0
+// console.log(fibbRec(1)); // -> 1
+// console.log(fibbRec(4)); // -> 3
+// console.log(fibbRec(7)); // -> 13
+// console.log(fibbRec(9)); // -> 34
+// console.log(fibbRec(11)); // -> 89
+    
+
+
+// //5.10.1.7
+
+// let fibbRec =  (n) => { if (n != 0) {n === 1 ? retVal = 1 : retVal = fibbRec(n - 1) + fibbRec(n - 2); return retVal; } else {return retVal = 0;}} 
+
+ 
+// console.log(fibbRec(0)); // -> 0
+// console.log(fibbRec(1)); // -> 1
+// console.log(fibbRec(4)); // -> 3
+// console.log(fibbRec(7)); // -> 13
+// console.log(fibbRec(9)); // -> 34
+// console.log(fibbRec(11)); // -> 89
+    
+
+// //5.10.1.6
+
+// let fibbRec = function (n) {
+//     let retVal = 0;
+//     if (n != 0) {
+//         if (n === 1) {
+//             retVal = 1;
+//         } else {
+//             retVal = fibbRec(n - 1) + fibbRec(n - 2);
+//         }
+//     }
+//     return retVal;
 // }
 
-// operations(input1, input2, add, sub, mult);
+// console.log(fibbRec(4)); // -> 3
+// console.log(fibbRec(7)); // -> 13
+// console.log(fibbRec(9)); // -> 34
+// console.log(fibbRec(11)); // -> 89
 
-console.log(add(12, 10)); // -> 22
-console.log(sub(12, 10)); // -> 2
-console.log(mult(12, 10.1)); // -> NaN
+// // wrong
+// // function fibonacci (f) {
+// //     while (n > 1) {
+// //         result = n-1 + n-2;
+// //         n--;
+// //     }
+// //     return result;
+// // }
+// // console.log(fibonacci(9)); 
+
+// // let fibonacciNumber = (f) => f == 1 ? 1 : fibonacci(f);
+// // console.log(fibonacciNumber(9));
 
 
-console.log( "control", add(10,1), sub(10,1), mult(10,1));
+
+
+// /*// Exercise 5.10.1.5
+// Write a program that will print out (to the console) consecutive integers 10 times,
+//  in two-second intervals (start with the number 1). 
+// Use the functions setInterval, clearInterval and setTimeout.*/
+
+
+// //based on their solution
+// let counter = 10;
+// let intervalId = setInterval(function () {
+//     console.log(counter--);
+// }, 1000);
+// setTimeout(function () {
+//     clearInterval(intervalId)
+// }, 11000);
+
+
+// //------------------wrong
+// // let interval = function() {
+// //     let timerId = setInterval(1000) /*ms*/;
+// //     setTimeout(function(){clearInterval(timerId);}, 5500);
+// // }
+
+// // let counter = function (callback){
+// //     for( i=10; i>0; i-- ){ 
+// //         interval(callback);
+// //         console.log("count",i);
+// //     }
+// // }
+// // counter(interval);
+
+
+// //------------------wrong
+// // let setInterval = (a)=>{
+    
+// //     console.log("wait", a, "ms");
+// //     return  setTimeout(countdown, a);    
+    
+// // };
+
+// // let countdown = (callback, a)=>{
+    
+// //     for( i=10; i>0; i-- ){
+// //         callback(a);
+// //         console.log(i);
+// //     }
+// // }
+
+// // countdown(setInterval, 1000);
+
+// // let clearInterval = (a)=>{
+// //     if (a!== NaN){clearTimeout(a);} else {return;}
+// // };
+
+
+// //------------------wrong
+// // // let setInterval = ()=>{
+// // //     for (let i = 0; i < 10; i++) {
+
+// // //         action();
+// // //         console.log("wait", i)
+// // //     }
+// // // };
+// // // let clearInterval = (a)=>{
+// // //     clearTimeout(a);
+// // // };
+
+// // // let action = (setInterval, a)=>{
+// // //  console.log("wait", a, "ms");
+// // // setTimeout(setInterval, a)
+// // // }
+    
+// // // // for( i=10; i>0; i-- ){
+// // // // setInterval(a);
+// // // // console.log(i);
+// // // // }
+
+
+// // // setTimeout(setInterval, 2);
+
+
+// // //Exercise 5.10.1.4
+
+// let add = (a, b) => !Number.isInteger(a) || !Number.isInteger(b) ? NaN : a + b;
+// let sub = (a, b) => !Number.isInteger(a) || !Number.isInteger(b) ? NaN : a - b;
+// let mult = (a, b) => !Number.isInteger(a) || !Number.isInteger(b) ? NaN : a * b;
+
+// let action =  function(callback, a, b){
+//     console.log(callback(a,b));
+
+// }
+
+// action(add, 12, 10); // -> 22
+// action(sub, 12, 10); // -> 2
+// action(mult, 10, 10.1); // -> NaN
 
 
 
-/*Exercise 5.10.1.1: 
-Arrays in JavaScript have a sort method available which, as you might guess, allows you to sort its elements. 
-This method takes as an argument a function that will compare two elements of the array. 
-The function should return zero if we consider the arguments to be the same, a value less than zero if we consider the first one to be smaller than the second, and a value larger than zero otherwise. 
-Take a look at the example: */
+// // //Exercise 5.10.1.3
+ 
+// let add = (a, b) => (!Number.isInteger(a) || !Number.isInteger(b)) ? NaN : a + b;
+// let sub = (a, b) => !Number.isInteger(a) || !Number.isInteger(b) ? NaN : a - b;
+// let mult = (a, b) => !Number.isInteger(a) || !Number.isInteger(b) ? NaN :  a * b;
 
-let numbers = [50, 10, 40, 30, 20];
-function compareNumbers(a, b) {
-     let retVal = 0;
-     if (a < b) {
-         retVal = -1;
-     } else if(a > b) {
-         retVal = 1;
-     }
-     return retVal;
-}
-let sorted = numbers.sort(compareNumbers);
-console.log(sorted); // [10, 20, 30, 40, 50]
+// console.log("control", add(10,1), sub(10,1) , mult(10,1));
 
-//1-----------ternary conditional operator
+
+// /**Exercise 5.10.1.2: 
+ 
+// Write three functions with the names add, sub, and mult, which will take two numerical arguments.
+//  The functions are to check if the given arguments are integers (use Number.isInteger). 
+//  If not, they return NaN, otherwise they return the result of addition, subtraction, or multiplication respectively. 
+//  The functions are to be declared using a function statement.
+// Example of use and expected results:*/
+
+
+// // let input1 =  Number(prompt("add first number"));
+// // let input2 = Number(prompt("add second number"));
+
+// function add(a,b){
+//     if(Number.isInteger(a) && Number.isInteger(b)){
+//         return a + b;
+//     } else {return NaN;} 
+// }
+
+// function sub(a,b){
+//     if(Number.isInteger(a) && Number.isInteger(b)){
+//         return a - b;
+//     } else {return NaN;}   
+// }
+
+// function mult(a,b){
+//     if(Number.isInteger(a) && Number.isInteger(b)){
+//         return a * b;
+//     } else {return NaN;}
+// }
+
+// // function operations(a, b, add, sub, mult){
+// //      if(typeof(a) === 'number' && typeof(b)  === 'number' ){
+// //       add(a,b);
+// //       sub(a,b);
+// //       mult(a,b);
+// //         alert ("Your numbers give reults of addition:", add, "subtraction", sub , "and multiplication", mult);
+// //         console.log( "control", a, b, add, sub, mult);
+// //  }
+// // }
+
+// // operations(input1, input2, add, sub, mult);
+
+// console.log(add(12, 10)); // -> 22
+// console.log(sub(12, 10)); // -> 2
+// console.log(mult(12, 10.1)); // -> NaN
+
+
+// console.log( "control", add(10,1), sub(10,1), mult(10,1));
+
+
+
+// /*Exercise 5.10.1.1: 
+// Arrays in JavaScript have a sort method available which, as you might guess, allows you to sort its elements. 
+// This method takes as an argument a function that will compare two elements of the array. 
+// The function should return zero if we consider the arguments to be the same, a value less than zero if we consider the first one to be smaller than the second, and a value larger than zero otherwise. 
+// Take a look at the example: */
+
 // let numbers = [50, 10, 40, 30, 20];
 // function compareNumbers(a, b) {
-//      let retVal = a < b ? -1 : 1;
+//      let retVal = 0;
+//      if (a < b) {
+//          retVal = -1;
+//      } else if(a > b) {
+//          retVal = 1;
+//      }
 //      return retVal;
 // }
 // let sorted = numbers.sort(compareNumbers);
 // console.log(sorted); // [10, 20, 30, 40, 50]
 
-//2------------ anonymouse function
-// let numbers = [50, 10, 40, 30, 20];
-// let retVal = function(a, b) {
-//      a < b ? -1 : 1;
-//     return retVal;
-// }
-// let sorted = numbers.sort(retVal);
-// console.log(sorted); // [10, 20, 30, 40, 50]
+// //1-----------ternary conditional operator
+// // let numbers = [50, 10, 40, 30, 20];
+// // function compareNumbers(a, b) {
+// //      let retVal = a < b ? -1 : 1;
+// //      return retVal;
+// // }
+// // let sorted = numbers.sort(compareNumbers);
+// // console.log(sorted); // [10, 20, 30, 40, 50]
 
-//3------------ arrow function
-// let numbers = [50, 10, 40, 30, 20];
-// let retVal = (a, b) => a < b ? -1 : 1;
+// //2------------ anonymouse function
+// // let numbers = [50, 10, 40, 30, 20];
+// // let retVal = function(a, b) {
+// //      a < b ? -1 : 1;
+// //     return retVal;
+// // }
+// // let sorted = numbers.sort(retVal);
+// // console.log(sorted); // [10, 20, 30, 40, 50]
 
-// let sorted = numbers.sort(retVal);
-// console.log(sorted); // [10, 20, 30, 40, 50]
+// //3------------ arrow function
+// // let numbers = [50, 10, 40, 30, 20];
+// // let retVal = (a, b) => a < b ? -1 : 1;
 
-//4---------------- compressed arrow function
-// let numbers = [50, 10, 40, 30, 20];
-// let sorted = numbers.sort(retVal = (a, b) => a < b ? -1 : 1);
-// console.log(sorted); // [10, 20, 30, 40, 50]
+// // let sorted = numbers.sort(retVal);
+// // console.log(sorted); // [10, 20, 30, 40, 50]
 
-//cisco answer ?? like what ???
-// let number = prompt("Enter a random number");
-// if(number > 90 && number < 110) {
-//     alert("Bingo!");
-// } else {
-//     alert("Miss");
-// }
+// //4---------------- compressed arrow function
+// // let numbers = [50, 10, 40, 30, 20];
+// // let sorted = numbers.sort(retVal = (a, b) => a < b ? -1 : 1);
+// // console.log(sorted); // [10, 20, 30, 40, 50]
 
-//5-----------I will try to combine their odd answer and my stuff
-// let number = prompt("Enter a random number between 1-110");
-// let answer = (number > 90 && number < 110) ? alert("Bingo!"): alert("Miss");
+// //cisco answer ?? like what ???
+// // let number = prompt("Enter a random number");
+// // if(number > 90 && number < 110) {
+// //     alert("Bingo!");
+// // } else {
+// //     alert("Miss");
+// // }
+
+// //5-----------I will try to combine their odd answer and my stuff
+// // let number = prompt("Enter a random number between 1-110");
+// // let answer = (number > 90 && number < 110) ? alert("Bingo!"): alert("Miss");
  
-// let numbers = [50, 10, 40, 30, 20];
-// numbers.push(Number(number)); //this pushes the number in as a string, and needs to be converted to an integer
-// let sorted = numbers.sort(retVal = (a, b)=>{return b-a;});
+// // let numbers = [50, 10, 40, 30, 20];
+// // numbers.push(Number(number)); //this pushes the number in as a string, and needs to be converted to an integer
+// // let sorted = numbers.sort(retVal = (a, b)=>{return b-a;});
 
-// console.log(sorted, "," , numbers[0]); // [10, 20, 30, 40, 50], ?? should be the highest number
-
-
-// //4.1.12
-/* Familiarize the student with:
-    loops (what are loops, the while loop, the do–while loop, the for loop, the for–of loop, the for–in loop, the break and continue statements)
-Scenario
-We can improve our contact list program a bit by using loops. You can now try to display not only the first or last contact, but all contacts in the list, regardless of their number.
-Additionally, try to enclose the whole program in a loop so that the user is repeatedly asked what they want to do. The user can choose to:
-    display the first contact (first)
-    display the last contact (last)
-    display all contacts (all)
-    add a new contact (new)
-    exit the program (quit)
-After executing the selected action, the program will give the opportunity to choose again. The program should end the actions only after the user gives a specified command, for example quit. */
-
-let contacts = [{
-    name: "Maxwell Wright",
-    phone: "(0191) 719 6495",
-    email: "Curabitur.egestas.nunc@nonummyac.co.uk"
-    }, {
-    name: "Raja Villarreal",
-    phone: "0866 398 2895",
-    email: "posuere.vulputate@sed.com"
-    }, {
-    name: "Helen Richards",
-    phone: "0800 1111",
-    email: "libero@convallis.edu"
-    }];
-
-let continueInput = true;
-// let continueInput = userAction == 5 ? false : true;
+// // console.log(sorted, "," , numbers[0]); // [10, 20, 30, 40, 50], ?? should be the highest number
 
 
-do{
-    let userAction = prompt("What do you want to do 1) Display the first contact, 2) Display the last contact, 3) Display all contacts, 4)Add new contact or 5)Stop here?", 0);
+// // //4.1.12
+// /* Familiarize the student with:
+//     loops (what are loops, the while loop, the do–while loop, the for loop, the for–of loop, the for–in loop, the break and continue statements)
+// Scenario
+// We can improve our contact list program a bit by using loops. You can now try to display not only the first or last contact, but all contacts in the list, regardless of their number.
+// Additionally, try to enclose the whole program in a loop so that the user is repeatedly asked what they want to do. The user can choose to:
+//     display the first contact (first)
+//     display the last contact (last)
+//     display all contacts (all)
+//     add a new contact (new)
+//     exit the program (quit)
+// After executing the selected action, the program will give the opportunity to choose again. The program should end the actions only after the user gives a specified command, for example quit. */
+
+// let contacts = [{
+//     name: "Maxwell Wright",
+//     phone: "(0191) 719 6495",
+//     email: "Curabitur.egestas.nunc@nonummyac.co.uk"
+//     }, {
+//     name: "Raja Villarreal",
+//     phone: "0866 398 2895",
+//     email: "posuere.vulputate@sed.com"
+//     }, {
+//     name: "Helen Richards",
+//     phone: "0800 1111",
+//     email: "libero@convallis.edu"
+//     }];
+
+// let continueInput = true;
+// // let continueInput = userAction == 5 ? false : true;
+
+
+// do{
+//     let userAction = prompt("What do you want to do 1) Display the first contact, 2) Display the last contact, 3) Display all contacts, 4)Add new contact or 5)Stop here?", 0);
     
-    switch (userAction){
-        case userAction = "1": 
-        alert(`The current first contact is: ${contacts[0].name}`);
-        break;
+//     switch (userAction){
+//         case userAction = "1": 
+//         alert(`The current first contact is: ${contacts[0].name}`);
+//         break;
 
-        case userAction = "2":
-        let lastConact = contacts.length - 1;
-        alert(`Current the last contact is: ${contacts[lastConact].name}`);
-        break;
+//         case userAction = "2":
+//         let lastConact = contacts.length - 1;
+//         alert(`Current the last contact is: ${contacts[lastConact].name}`);
+//         break;
         
-        case userAction = "3":
-            let list = "";
-            let count = 1;
-            contacts.forEach(contact => {
-                list += ' ' + count + '. ' + contact.name + '\n';
-                count++;
-            });
+//         case userAction = "3":
+//             let list = "";
+//             let count = 1;
+//             contacts.forEach(contact => {
+//                 list += ' ' + count + '. ' + contact.name + '\n';
+//                 count++;
+//             });
 
-        alert(`Your contacts \n${list}`); 
-        // for( let name in contacts) { console.log(`${name} -> ${contacts[name]}`);};
-        // alert (`Your contacts \n${contacts.name}`);
-        break;
+//         alert(`Your contacts \n${list}`); 
+//         // for( let name in contacts) { console.log(`${name} -> ${contacts[name]}`);};
+//         // alert (`Your contacts \n${contacts.name}`);
+//         break;
    
-        case userAction = "4":
-        let contact = {};
-        contact.name = prompt("write your name:", "");
-        contact.phone = prompt("Write your phone number:", "");
-        contact.email = prompt("Write you email:", "");
-        if (contact.name !== "" || contact.phone !== "" || contact.email !== "") { contacts.push(contact);
-        } else { alert("Error. Contact information is missing")};
-        break;
+//         case userAction = "4":
+//         let contact = {};
+//         contact.name = prompt("write your name:", "");
+//         contact.phone = prompt("Write your phone number:", "");
+//         contact.email = prompt("Write you email:", "");
+//         if (contact.name !== "" || contact.phone !== "" || contact.email !== "") { contacts.push(contact);
+//         } else { alert("Error. Contact information is missing")};
+//         break;
         
-        case userAction = "5":
-        continueInput = false;
-        break;
+//         case userAction = "5":
+//         continueInput = false;
+//         break;
         
-        default: alert("Error. It seem like your input is incorrect");
-    }
-} while (continueInput !==false);
+//         default: alert("Error. It seem like your input is incorrect");
+//     }
+// } while (continueInput !==false);
 
-alert("Tak for denne gang");
+// alert("Tak for denne gang");
 
-console.log("check", )
+// console.log("check", )
 
-// //Exercise 6: Modify the calculator program that you made in Module 4 Section 2 in such a way that it will work in the loop until the user inputs Q in any of the prompt boxes.
+// // //Exercise 6: Modify the calculator program that you made in Module 4 Section 2 in such a way that it will work in the loop until the user inputs Q in any of the prompt boxes.
 
-// //4.1.11.6
+// // //4.1.11.6
 
-let numberOne = prompt("Input first number", 0);
-let operator = prompt("Choose one of the four mathematical operation  +, -, * or /","");
-let numberTwo = prompt("Input second number", 0);
-let numberCheck = Number.isNaN(numberOne) == false && Number.isNaN(numberTwo) == false ? true : false;
-let result;
-let input = true;
+// let numberOne = prompt("Input first number", 0);
+// let operator = prompt("Choose one of the four mathematical operation  +, -, * or /","");
+// let numberTwo = prompt("Input second number", 0);
+// let numberCheck = Number.isNaN(numberOne) == false && Number.isNaN(numberTwo) == false ? true : false;
+// let result;
+// let input = true;
 
-if ( numberOne === "Q" || operator === "Q" || numberTwo === "Q" ){ input = false;}
+// if ( numberOne === "Q" || operator === "Q" || numberTwo === "Q" ){ input = false;}
 
-while(input == true){
+// while(input == true){
 
-if (numberCheck == true){
-    switch (operator) 
-    { 
-        case operator = "+": 
-        result = numberOne + numberTwo;
-        alert(`Your result is: ${result}`);
-        break;
+// if (numberCheck == true){
+//     switch (operator) 
+//     { 
+//         case operator = "+": 
+//         result = numberOne + numberTwo;
+//         alert(`Your result is: ${result}`);
+//         break;
 
-        case operator = "-": 
-        result = numberOne - numberTwo;  
-        alert(`Your result is: ${result}`);
-        break;
+//         case operator = "-": 
+//         result = numberOne - numberTwo;  
+//         alert(`Your result is: ${result}`);
+//         break;
 
-        case operator = "*": 
-        result = numberOne * numberTwo;
-        alert(`Your result is: ${result}`);
-        break;
+//         case operator = "*": 
+//         result = numberOne * numberTwo;
+//         alert(`Your result is: ${result}`);
+//         break;
 
-        case operator = "/": 
-        result = numberOne / numberTwo;
-        alert(`Your result is: ${result}`);
+//         case operator = "/": 
+//         result = numberOne / numberTwo;
+//         alert(`Your result is: ${result}`);
 
-        break;
-        default: alert("Error. The operator input is wrong");
-    }
-} else { alert("Error. Please ender a number");}
-alert("Your result is:", result);
-}
+//         break;
+//         default: alert("Error. The operator input is wrong");
+//     }
+// } else { alert("Error. Please ender a number");}
+// alert("Your result is:", result);
+// }
 
-alert("Error. Your entry is invalid");
-console.log("Satus for varables",check, operator, result);
+// alert("Error. Your entry is invalid");
+// console.log("Satus for varables",check, operator, result);
 
-//4.1.11.5
+// //4.1.11.5
 
-let vessel = {
-    LATITUDE: "40.07288",
-    LONGITUDE: "154.48535", 
-    COURSE: "285.6", 
-    SPEED: "14.0", 
-    IMO: "9175717", 
-    NAME: "MARENO"
-};
+// let vessel = {
+//     LATITUDE: "40.07288",
+//     LONGITUDE: "154.48535", 
+//     COURSE: "285.6", 
+//     SPEED: "14.0", 
+//     IMO: "9175717", 
+//     NAME: "MARENO"
+// };
  
-for( let key in vessel) { 
-console.log(`${key} -> ${vessel[key]}`);
-};
+// for( let key in vessel) { 
+// console.log(`${key} -> ${vessel[key]}`);
+// };
 
-console.log("check", vessel, vessel.Name);
-
-
-//4.1.11.4
-/*Exercise 4: Write a program using a loop that will ask the user for the name of the movie (first prompt) and its rating from www.imdb.com (second prompt). 
-The program will allow you to enter as many movies as you want into the movies array. 
-Each element of the array will be an object, consisting of two fields: title and imdb. The input is completed if the user presses Cancel in the prompt dialog. 
-Then the program should first print out to the console all movies that have a rating of less than 7, then those whose rating is greater than or equal to 7. 
-Write the name of the movie and its rating next to each other, e.g.: */
-
-let filmListExample = [
-    {title: "V for Vendetta" , rating: 8.2},
-    {title: "My Fault", rating: 6.2},
-    {title: "Promising Young Woman", rating: 7.5},
-    {title: "The Garfield Movie ", rating: 5.8},
-    {title: "Wasabi", rating: 6.6},
-    {title: "Saltburn", rating: 7.0},
-    {title: "The Accountant", rating: 7.3},
-    {title: "Howl's Moving Castle", rating: 8.3},
-    ];
-
-let filmList = [
-        {title: "V for Vendetta" , rating: 8.2},
-        {title: "My Fault", rating: 6.2}
-    ];
-
-let film = {};
-let finished = false;
-let lowRatingFilm = [];
-let highRatingFilm = [];
-
-while (finished !== true){
-    film.title = prompt("Add a movie title", "");
-    film.rating = prompt("Look into rating for the film on IMDB and add it here", "");
-
-   if ( film.title !== "" && film.rating !== ""){ filmList.push(film.title && film.rating);}
-
-   let continueLoop = confirm(`You have adeed ${filmList.length} films, Do you want to continue?`); 
-   finished = continueLoop === true ? false : true; 
-}
-
-for ( i = 0; i<filmList[filmList.length]; i++ ){
-    if (Number(filmList[i].film.rating) > 7.0){ continue; }
-    // console.log("The film number", filmList[i], filmList[i].title, filmList[i].rating);
-    highRatingFilm.push(film.title && film.rating);
-}
-
-for ( i = 0; i<filmList[filmList.length]; i++ ){
-    if (Number(filmList[i].film.rating) < 7.0){ continue; }
-    // console.log("The film number", filmList[i], filmList[i].title, filmList[i].rating);
-    lowRatingFilm.push(film.title && film.rating);
-}
-
-console.log(" Here is list of low rating", lowRatingFilm);
-console.log(" Here is list of high rating", highRatingFilm);
-console.log("The film list total number is:", filmList.length);
-
-/*
-//4.1.11.3
-
-Exercise 3: There are ten different numbers in the following numbers array:
-let numbers = [21, 45, 100, 12, 11, 78, 61, 4, 39, 22];
-
-Write a program that first writes out all these numbers on the console, 
-then only those that are even (hint: the remainder of dividing an even number by 2 is equal to 0), 
-then only those that are larger than 10 and at the same time smaller than 60. */
-
-let numbers = [21, 45, 100, 12, 11, 78, 61, 4, 39, 22];
-let count = 0;
-
-while (count <=3)
-{
-    switch(count)
-    {
-        case 1:
-        for( let i = 0; i < numbers.length; i++){
-            console.log("The ledger contains number", numbers[i]);}
-        break;
-
-        case 2:
-        for (let i = 0; i < numbers.length; i++) {
-            if (i%2 == 0) { continue; }
-            console.log("The ledger contains number", numbers[i]);}
-        break;
-
-        case 3: 
-        for(let i = 0; i < numbers.length; i++){
-            if (10<i<60){console.log("The ledger contains number", numbers[i]);}}  
-        break;
-
-        default: alert("Now it is over");
-    }
-
-    count += 1;
-    console.log("status", count);
-}
+// console.log("check", vessel, vessel.Name);
 
 
-// //4.1.11.2
-        // //Exercise 2: Modify the previous program so that it asks the user for the first and last number it uses instead of 100 and 0 
-        // //(hint: use the prompt dialog).
+// //4.1.11.4
+// /*Exercise 4: Write a program using a loop that will ask the user for the name of the movie (first prompt) and its rating from www.imdb.com (second prompt). 
+// The program will allow you to enter as many movies as you want into the movies array. 
+// Each element of the array will be an object, consisting of two fields: title and imdb. The input is completed if the user presses Cancel in the prompt dialog. 
+// Then the program should first print out to the console all movies that have a rating of less than 7, then those whose rating is greater than or equal to 7. 
+// Write the name of the movie and its rating next to each other, e.g.: */
 
-        let start = prompt("Start point of counting down","");
-        let finish = prompt("Endpoint of countdown","");
+// let filmListExample = [
+//     {title: "V for Vendetta" , rating: 8.2},
+//     {title: "My Fault", rating: 6.2},
+//     {title: "Promising Young Woman", rating: 7.5},
+//     {title: "The Garfield Movie ", rating: 5.8},
+//     {title: "Wasabi", rating: 6.6},
+//     {title: "Saltburn", rating: 7.0},
+//     {title: "The Accountant", rating: 7.3},
+//     {title: "Howl's Moving Castle", rating: 8.3},
+//     ];
 
-        console.log(start,finish);
-        if(Number(finish) < Number(start)){
-           for (let i = start; i > finish; i -=10){
-               console.log("Current count", i, "the start is", start);
-           }
-           alert(`We finished at ${finish}`);
+// let filmList = [
+//         {title: "V for Vendetta" , rating: 8.2},
+//         {title: "My Fault", rating: 6.2}
+//     ];
 
-        } else { alert("Error. The start should be higher then finish number.")}
+// let film = {};
+// let finished = false;
+// let lowRatingFilm = [];
+// let highRatingFilm = [];
+
+// while (finished !== true){
+//     film.title = prompt("Add a movie title", "");
+//     film.rating = prompt("Look into rating for the film on IMDB and add it here", "");
+
+//    if ( film.title !== "" && film.rating !== ""){ filmList.push(film.title && film.rating);}
+
+//    let continueLoop = confirm(`You have adeed ${filmList.length} films, Do you want to continue?`); 
+//    finished = continueLoop === true ? false : true; 
+// }
+
+// for ( i = 0; i<filmList[filmList.length]; i++ ){
+//     if (Number(filmList[i].film.rating) > 7.0){ continue; }
+//     // console.log("The film number", filmList[i], filmList[i].title, filmList[i].rating);
+//     highRatingFilm.push(film.title && film.rating);
+// }
+
+// for ( i = 0; i<filmList[filmList.length]; i++ ){
+//     if (Number(filmList[i].film.rating) < 7.0){ continue; }
+//     // console.log("The film number", filmList[i], filmList[i].title, filmList[i].rating);
+//     lowRatingFilm.push(film.title && film.rating);
+// }
+
+// console.log(" Here is list of low rating", lowRatingFilm);
+// console.log(" Here is list of high rating", highRatingFilm);
+// console.log("The film list total number is:", filmList.length);
+
+// /*
+// //4.1.11.3
+
+// Exercise 3: There are ten different numbers in the following numbers array:
+// let numbers = [21, 45, 100, 12, 11, 78, 61, 4, 39, 22];
+
+// Write a program that first writes out all these numbers on the console, 
+// then only those that are even (hint: the remainder of dividing an even number by 2 is equal to 0), 
+// then only those that are larger than 10 and at the same time smaller than 60. */
+
+// let numbers = [21, 45, 100, 12, 11, 78, 61, 4, 39, 22];
+// let count = 0;
+
+// while (count <=3)
+// {
+//     switch(count)
+//     {
+//         case 1:
+//         for( let i = 0; i < numbers.length; i++){
+//             console.log("The ledger contains number", numbers[i]);}
+//         break;
+
+//         case 2:
+//         for (let i = 0; i < numbers.length; i++) {
+//             if (i%2 == 0) { continue; }
+//             console.log("The ledger contains number", numbers[i]);}
+//         break;
+
+//         case 3: 
+//         for(let i = 0; i < numbers.length; i++){
+//             if (10<i<60){console.log("The ledger contains number", numbers[i]);}}  
+//         break;
+
+//         default: alert("Now it is over");
+//     }
+
+//     count += 1;
+//     console.log("status", count);
+// }
 
 
-        //  let start = prompt("Start point of counting down","");
-        //  let finish = prompt("Endpoint of countdown","");
+// // //4.1.11.2
+//         // //Exercise 2: Modify the previous program so that it asks the user for the first and last number it uses instead of 100 and 0 
+//         // //(hint: use the prompt dialog).
 
-        //  console.log(start,finish);
-        //  if(Number(finish) < Number(start)){
-        //     for (let i = start; i > finish; i --){
-        //         console.log(i);
-        //     }
-        //     alert(`We finished at ${finish}`);
-        //  } else { alert("Error. The start should be higher then finish number.")}
+//         let start = prompt("Start point of counting down","");
+//         let finish = prompt("Endpoint of countdown","");
 
+//         console.log(start,finish);
+//         if(Number(finish) < Number(start)){
+//            for (let i = start; i > finish; i -=10){
+//                console.log("Current count", i, "the start is", start);
+//            }
+//            alert(`We finished at ${finish}`);
 
-        // let start = prompt("Please enter what number you would like to start the count at","");
-        // let finish = prompt("Please enter what number you would like to finish the count at","");
-
-        // if(finish>start){
-        // for (let i=start; i> finish; i ++ ){
-        //     console.log(i);
-        //  }
-        // } else { alert("Error. The start should be less then finish number.")}
+//         } else { alert("Error. The start should be higher then finish number.")}
 
 
+//         //  let start = prompt("Start point of counting down","");
+//         //  let finish = prompt("Endpoint of countdown","");
 
-//4.1.11.1
+//         //  console.log(start,finish);
+//         //  if(Number(finish) < Number(start)){
+//         //     for (let i = start; i > finish; i --){
+//         //         console.log(i);
+//         //     }
+//         //     alert(`We finished at ${finish}`);
+//         //  } else { alert("Error. The start should be higher then finish number.")}
 
-//do...while loop. it starts to print at 90.
-let i = 100;
-do {
-    i -= 10;
-    console.log(i);
-} while(i >0);
 
-//with while loop. it starts to print at 100.
-let i = 100;
-while (i >0 ){
-    // i -= 10;
-    console.log(i);
-    i = i - 10;
-}
+//         // let start = prompt("Please enter what number you would like to start the count at","");
+//         // let finish = prompt("Please enter what number you would like to finish the count at","");
 
-with - 10 in for loop. 
-for (let i=100; i>0; i -=10 ){
-    console.log(i);
-}
+//         // if(finish>start){
+//         // for (let i=start; i> finish; i ++ ){
+//         //     console.log(i);
+//         //  }
+//         // } else { alert("Error. The start should be less then finish number.")}
 
-with - 1 in for loop. The increment with 1 
-for (let i=100; i>0; i -- ){
-    console.log(i);
-}
+
+
+// //4.1.11.1
+
+// //do...while loop. it starts to print at 90.
+// let i = 100;
+// do {
+//     i -= 10;
+//     console.log(i);
+// } while(i >0);
+
+// //with while loop. it starts to print at 100.
+// let i = 100;
+// while (i >0 ){
+//     // i -= 10;
+//     console.log(i);
+//     i = i - 10;
+// }
+
+// with - 10 in for loop. 
+// for (let i=100; i>0; i -=10 ){
+//     console.log(i);
+// }
+
+// with - 1 in for loop. The increment with 1 
+// for (let i=100; i>0; i -- ){
+//     console.log(i);
+// }
 
 
 // //4.0.9

@@ -1,4 +1,16 @@
 //THEIR solutions:
+
+//let numbers = [10, 40, 0, 20, 50];
+// for (let i = 0; i < numbers.length; i++) {
+//     let result;
+//     try {
+//         result = div(1000, numbers[i]);
+//     } catch (e) {
+//         result = e.message;
+//     }
+//     console.log(result);
+// }
+
 //5.10.1.8
 // function fibbIter(n) {
 //     let a = 0, b = 1;
